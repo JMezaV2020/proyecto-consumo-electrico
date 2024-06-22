@@ -47,11 +47,11 @@ La tabla de datos cuenta con 389392 filas y 10 columnas.
 - **Python**: Para la manipulación y análisis de datos.
 - **Pandas**: Biblioteca para el manejo de estructuras de datos.
 - **Matplotlib / Seaborn**: Bibliotecas para la visualización de datos.
-- **Django**: Framework web utilizado para desarrollar la aplicación web.
+- **Flask**: Framework web utilizado para desarrollar la aplicación web.
 - **PythonAnywhere**: Plataforma utilizada para desplegar la aplicación web.
 
 ## Despliegue
-El proyecto será desplegado utilizando [PythonAnywhere](https://www.pythonanywhere.com/) y el framework [Django](https://www.djangoproject.com/). Esto permitirá que el análisis y las visualizaciones sean accesibles a través de una interfaz web amigable.
+El proyecto será desplegado utilizando [PythonAnywhere](https://www.pythonanywhere.com/) y el framework [Flask](https://flask.palletsprojects.com/). Esto permitirá que el análisis y las visualizaciones sean accesibles a través de una interfaz web amigable.
 
 ## Instalación y Ejecución
 Para reproducir este proyecto en tu máquina local, sigue estos pasos:
@@ -69,17 +69,14 @@ Para reproducir este proyecto en tu máquina local, sigue estos pasos:
     pip install -r requirements.txt
     ```
 
-3. Ejecuta las migraciones de la base de datos:
+3. Inicia la aplicación Flask:
     ```bash
-    python manage.py migrate
+    export FLASK_APP=app.py
+    export FLASK_ENV=development  # Para habilitar el modo de desarrollo
+    flask run
     ```
 
-4. Inicia el servidor de desarrollo de Django:
-    ```bash
-    python manage.py runserver
+4. Accede a la aplicación web en tu navegador:
     ```
-
-5. Accede a la aplicación web en tu navegador:
-    ```
-    http://127.0.0.1:8000
+    http://127.0.0.1:5000
     ```
