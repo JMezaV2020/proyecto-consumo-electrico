@@ -1,5 +1,7 @@
 # Proyecto de Consumo Eléctrico Anual por Comuna y Tipo de Cliente
 
+https://jmezav.pythonanywhere.com/
+
 ## Descripción del Proyecto
 Este proyecto tiene como objetivo analizar el consumo eléctrico anual en distintas comunas de Chile, desglosado por tipo de cliente. Los datos utilizados provienen de las entregas de antecedentes de empresas distribuidoras a la Comisión Nacional de Energía (CNE). A través de este análisis, se busca identificar patrones de consumo, tendencias estacionales y diferencias en el consumo entre diversos tipos de clientes y regiones.
 
