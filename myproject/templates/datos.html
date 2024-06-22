@@ -2,7 +2,38 @@
 
 {% block content %}
 <section>
-    <p>Tarifa: {{ tarifa }}</p>
-    <p>Número de Cliente: {{ numero_cliente }}</p>
+    <h2>Datos de Consumo Eléctrico</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Año</th>
+                <th>Mes</th>
+                <th>Región</th>
+                <th>Comuna</th>
+                <th>Tipo de Clientes</th>
+                <th>Tarifa</th>
+                <th>Clientes Facturados</th>
+                <th>e1_kWh</th>
+                <th>e2_kWh</th>
+                <th>Energía kWh</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in datos %}
+                <tr>
+                    <td>{{ item.anio }}</td>
+                    <td>{{ item.mes }}</td>
+                    <td>{{ item.region }}</td>
+                    <td>{{ item.comuna }}</td>
+                    <td>{{ item.tipo_clientes }}</td>
+                    <td>{{ item.tarifa }}</td>
+                    <td>{{ item.clientes_facturados }}</td>
+                    <td>{{ item.e1_kwh }}</td>
+                    <td>{{ item.e2_kwh }}</td>
+                    <td>{{ item.energia_kwh }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </section>
 {% endblock %}
