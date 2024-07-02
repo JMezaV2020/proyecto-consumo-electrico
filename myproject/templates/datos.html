@@ -2,7 +2,7 @@
 
 {% block content %}
 <section>
-    <h2>Datos de Consumo Eléctrico</h2>
+    <h2>Datos de Consumo Eléctrico (Aleatorios)</h2>
     <table>
         <thead>
             <tr>
@@ -13,13 +13,13 @@
                 <th>Tipo de Clientes</th>
                 <th>Tarifa</th>
                 <th>Clientes Facturados</th>
-                <th>e1_kWh</th>
-                <th>e2_kWh</th>
+                <th>E1 kWh</th>
+                <th>E2 kWh</th>
                 <th>Energía kWh</th>
             </tr>
         </thead>
         <tbody>
-            {% for item in datos %}
+            {% for item in datos[:10] %}  {# Limitar a los primeros 10 elementos #}
                 <tr>
                     <td>{{ item.anio }}</td>
                     <td>{{ item.mes }}</td>
@@ -35,5 +35,6 @@
             {% endfor %}
         </tbody>
     </table>
+    <a href="{{ url_for('download_csv') }}" class="btn-download">Descargar Excel</a>
 </section>
 {% endblock %}
